@@ -1,0 +1,73 @@
+alias ez='vim ~/.zshrc'
+alias sz='source ~/.zshrc'
+
+
+### ENVIRONMENT
+
+export EDITOR='vim'
+export BROWSER='google-chrome'
+export PAGER='less'
+export LESS=XFRaeiM # the XFR is important here: don't mess with the terminal!
+
+# Make a help command available, something like bash :-)
+autoload -U run-help
+case $(type run-help) in
+    *alias*) unalias run-help
+esac
+alias help=run-help
+HELPDIR=/usr/local/share/zsh/help
+
+setopt AUTO_CD # cd if no matching command
+setopt AUTO_PARAM_SLASH # adds slash at end of tabbed dirs
+setopt MARK_DIRS # adds slash to end of completed dirs
+setopt HIST_IGNORE_ALL_DUPS # never append duplicates to history
+
+
+### ANTIGEN <3
+
+source `brew --prefix`/share/antigen.zsh
+
+antigen use oh-my-zsh
+
+antigen bundle git
+antigen bundle history
+antigen bundle pip
+antigen bundle sublime
+
+antigen apply
+
+source ~/.zsh/aliases.sh
+
+
+### COMPLETIONS
+
+autoload compinit && compinit
+fpath=(/usr/local/share/zsh-completions $fpath)
+
+
+### PROMPT
+
+# From http://dotfiles.org/~_why/.zshrc
+# Sets the window title nicely no matter where you are
+function title() {
+    # escape '%' chars in $1, make nonprintables visible
+    a=${(V)1//\%/\%\%}
+
+    # Truncate command, and join lines.
+    a=$(print -Pn "%40>...>$a" | tr -d "\n")
+
+    case $TERM in
+        screen)
+            print -Pn "\ek$a:$3\e\\" # screen title (in ^A")
+        ;;
+        xterm*|rxvt)
+            print -Pn "\e]2;$2\a" # plain xterm title ($3 for pwd)
+        ;;
+    esac
+}
+
+ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[magenta]%}("
+ZSH_THEME_GIT_PROMPT_SUFFIX=")"
+
+autoload -U colors && colors
+PROMPT='%n@%m %{$fg_bold[blue]%}%~%b$(git_prompt_info) %{$fg_bold[blue]%}%#%{$reset_color%} '
