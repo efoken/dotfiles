@@ -1,5 +1,4 @@
-alias ez='vim ~/.zshrc'
-alias sz='source ~/.zshrc'
+export ZSH=$HOME/.dotfiles
 
 
 ### ENVIRONMENT
@@ -7,6 +6,16 @@ alias sz='source ~/.zshrc'
 export EDITOR='vim'
 export BROWSER='google-chrome'
 export PAGER='less'
+
+# Colors for less without compiled termcap files (curses feature)
+export LESS_TERMCAP_mb=$'\e[01;31m'
+export LESS_TERMCAP_md=$'\e[01;38;5;74m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[38;5;246m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[04;38;5;146m'
+
 export LESS=XFRaeiM # the XFR is important here: don't mess with the terminal!
 
 # Make a help command available, something like bash :-)
@@ -17,57 +26,47 @@ esac
 alias help=run-help
 HELPDIR=/usr/local/share/zsh/help
 
-setopt AUTO_CD # cd if no matching command
-setopt AUTO_PARAM_SLASH # adds slash at end of tabbed dirs
-setopt MARK_DIRS # adds slash to end of completed dirs
-setopt HIST_IGNORE_ALL_DUPS # never append duplicates to history
-
 
 ### ANTIGEN <3
 
-source `brew --prefix`/share/antigen.zsh
+if (( $+commands[brew] )); then
+    source `brew --prefix`/share/antigen.zsh
+else
+    [[ ! -d $ZSH/lib/antigen ]] &&
+        mkdir -p $ZSH/lib && git clone https://github.com/zsh-users/antigen.git $ZSH/lib/antigen
+    source $ZSH/lib/antigen/antigen.zsh
+fi
 
 antigen use oh-my-zsh
 
+if (( $+commands[brew] )); then
+    antigen bundle brew
+    antigen bundle brew-cask
+fi
+
 antigen bundle git
+antigen bundle grunt
 antigen bundle history
 antigen bundle pip
 antigen bundle sublime
 
 antigen apply
 
-source ~/.zsh/aliases.sh
+source $ZSH/zsh/aliases.zsh
+source $ZSH/zsh/completion.zsh
+source $ZSH/zsh/config.zsh
+source $ZSH/zsh/window.zsh
 
-
-### COMPLETIONS
-
-autoload compinit && compinit
+# Initialize autocomplete here, otherwise functions won't be loaded
+autoload -U compinit && compinit
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 
 ### PROMPT
 
-# From http://dotfiles.org/~_why/.zshrc
-# Sets the window title nicely no matter where you are
-function title() {
-    # escape '%' chars in $1, make nonprintables visible
-    a=${(V)1//\%/\%\%}
-
-    # Truncate command, and join lines.
-    a=$(print -Pn "%40>...>$a" | tr -d "\n")
-
-    case $TERM in
-        screen)
-            print -Pn "\ek$a:$3\e\\" # screen title (in ^A")
-        ;;
-        xterm*|rxvt)
-            print -Pn "\e]2;$2\a" # plain xterm title ($3 for pwd)
-        ;;
-    esac
-}
-
 ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[magenta]%}("
 ZSH_THEME_GIT_PROMPT_SUFFIX=")"
 
 autoload -U colors && colors
+
 PROMPT='%n@%m %{$fg_bold[blue]%}%~%b$(git_prompt_info) %{$fg_bold[blue]%}%#%{$reset_color%} '
