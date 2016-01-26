@@ -9,3 +9,4 @@ brew 'grc'
 
 cask '1password'
 cask 'google-chrome'
+cask 'sourcetree'

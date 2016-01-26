@@ -1,7 +1,10 @@
 [user]
 	name = AUTHOR_NAME
 	email = AUTHOR_EMAIL
+[credential]
+	helper = GIT_CREDENTIAL_HELPER
 [alias]
+	wtf = !$ZSH/bin/git-wtf
 	rank-contributors = !$ZSH/bin/git-rank-contributors
 [color]
 	diff = auto
@@ -15,7 +18,7 @@
 	whitespace = nowarn
 [difftool]
 	prompt = false
-[help]
-	autocorrect = 1
+[mergetool]
+	keepBackup = false
 [push]
 	default = simple
