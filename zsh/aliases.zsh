@@ -8,7 +8,6 @@ if (( $+commands[yaourt] )); then
 fi
 
 alias ..='cd ..'
-alias cd..='cd ..'
 alias :q='exit'
 
 # Correct some typos that I make often :-)

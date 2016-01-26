@@ -4,8 +4,9 @@
 [credential]
 	helper = GIT_CREDENTIAL_HELPER
 [alias]
-	wtf = !$ZSH/bin/git-wtf
+	count = !git shortlog -sn
 	rank-contributors = !$ZSH/bin/git-rank-contributors
+	wtf = !$ZSH/bin/git-wtf
 [color]
 	diff = auto
 	status = auto

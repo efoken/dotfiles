@@ -51,8 +51,10 @@ if (( $+commands[brew] )); then
 fi
 
 antigen bundle git
+antigen bundle git-extras
 antigen bundle grunt
 antigen bundle history
+antigen bundle npm
 antigen bundle pip
 antigen bundle sublime
 
