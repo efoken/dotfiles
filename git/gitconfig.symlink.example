@@ -1,0 +1,21 @@
+[user]
+	name = AUTHOR_NAME
+	email = AUTHOR_EMAIL
+[alias]
+	rank-contributors = !$ZSH/bin/git-rank-contributors
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = true
+[core]
+	excludesfile = ~/.gitignore
+	editor = vim
+[apply]
+	whitespace = nowarn
+[difftool]
+	prompt = false
+[help]
+	autocorrect = 1
+[push]
+	default = simple

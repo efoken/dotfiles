@@ -1,0 +1,4 @@
+# Always sort found files lexically
+--sort-files
+
+--ignore-file=match:.sublime-workspace

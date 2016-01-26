@@ -1,9 +1,15 @@
 export ZSH=$HOME/.dotfiles
 
+export PATH=$ZSH/bin:$HOME/.gem/ruby/2.1.0/bin:$PATH
+
+typeset -U config_files
+config_files=($ZSH/*/*.zsh)
+
 
 ### ENVIRONMENT
 
 export EDITOR='vim'
+export VISUAL='vim'
 export BROWSER='google-chrome'
 export PAGER='less'
 
