@@ -5,11 +5,13 @@ tap 'homebrew/bundle'
 
 brew 'ack'
 brew 'antigen'
+brew 'ag'
 brew 'grc'
 brew 'unrar'
 
 cask '1password'
 cask 'cyberduck'
+cask 'enpass'
 cask 'google-chrome'
 cask 'pgadmin3'
 cask 'poedit'
