@@ -7,6 +7,9 @@ if (( $+commands[yaourt] )); then
     alias rmorphans='y -Rcs $(y -Qqdt)'
 fi
 
+# Repeat the last command with sudo
+alias please='sudo $(fc -ln -1)'
+
 alias ..='cd ..'
 alias :q='exit'
 
@@ -15,7 +18,7 @@ alias gerp='grep'
 alias sl='ls'
 alias vm='mv'
 
-# GRC colorizes nifty unix tools all over the place
+# GRC colorizes nifty Unix tools all over the place
 if (( $+commands[grc] )); then
     if (( $+commands[brew] )); then
         source `brew --prefix`/etc/grc.bashrc
