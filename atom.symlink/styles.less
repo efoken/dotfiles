@@ -1,0 +1,92 @@
+.tree-view {
+  background: #e6e6e6;
+}
+
+.focusable-panel:focus {
+  background: #e6e6e6;
+
+  .selected:before {
+    background: #444;
+  }
+}
+
+.list-tree {
+  li:not(.list-nested-item),
+  li.list-nested-item > .list-item {
+    color: #333;
+  }
+
+  li:not(.list-nested-item).status-ignored,
+  li.list-nested-item.status-ignored > .list-item {
+    color: #a0a0a0;
+  }
+
+  li:not(.list-nested-item).status-added,
+  li.list-nested-item.status-added > .list-item {
+    color: #00c254;
+  }
+
+  li:not(.list-nested-item).status-modified,
+  li.list-nested-item.status-modified > .list-item {
+    color: #f07a00;
+  }
+}
+
+// Sunburst improvements
+.theme-sunburst {
+  atom-text-editor::shadow {
+    .wrap-guide {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .invisible-character {
+      color: rgba(255, 255, 255, 0.2);
+    }
+
+    .indent-guide {
+      box-shadow: inset 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .line.cursor-line {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .selection .region {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+atom-text-editor {
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+atom-text-editor::shadow {
+  .invisible-character.eol {
+    opacity: 0;
+  }
+
+  .line-number {
+    padding-left: 1em;
+  }
+}
+
+atom-text-editor::shadow atom-text-editor-minimap::shadow {
+  canvas {
+    opacity: 0.4;
+  }
+
+  .minimap-visible-area::after {
+    background-color: transparent;
+    transition: background-color 0.2s ease;
+  }
+
+  // Remove stupid quick-settings in minimap
+  .minimap-controls {
+    display: none;
+  }
+}
+
+atom-text-editor::shadow atom-text-editor-minimap:hover::shadow .minimap-visible-area::after {
+  background-color: rgba(255, 255, 255, 0.1);
+}

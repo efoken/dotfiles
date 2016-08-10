@@ -1,0 +1,39 @@
+"*":
+  "color-picker":
+    abbreviateValues: true
+    automaticReplace: true
+    preferredFormat: "HEX"
+  core:
+    disabledPackages: [
+      "metrics"
+      "exception-reporting"
+      "background-tips"
+    ]
+    packagesWithKeymapsDisabled: []
+    themes: [
+      "atom-dark-ui"
+      "sunburst"
+    ]
+  editor:
+    fontFamily: "Hack"
+    fontSize: 13
+    invisibles: {}
+    lineHeight: 1.230769231
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+    softWrapHangingIndent: 4
+    zoomFontWhenCtrlScrolling: false
+  "file-icons": {}
+  minimap: {}
+  "release-notes":
+    viewedVersion: "f0bd3b1"
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    syncHorizontalScroll: true
+  welcome:
+    showOnStartup: false
+  whitespace: {}
