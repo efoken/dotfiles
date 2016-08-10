@@ -16,9 +16,9 @@
     ]
   editor:
     fontFamily: "Hack"
-    fontSize: 13
+    fontSize: 12
     invisibles: {}
-    lineHeight: 1.230769231
+    lineHeight: 1.3
     showIndentGuide: true
     showInvisibles: true
     softWrap: true
@@ -29,10 +29,7 @@
   "release-notes":
     viewedVersion: "f0bd3b1"
   "split-diff":
-    diffWords: true
     ignoreWhitespace: true
-    leftEditorColor: "red"
-    rightEditorColor: "green"
     syncHorizontalScroll: true
   welcome:
     showOnStartup: false

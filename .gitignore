@@ -1,4 +1,14 @@
+/lib
+
+atom.symlink/.apm
+atom.symlink/.node-gyp
+atom.symlink/blob-store
+atom.symlink/compile-cache
+atom.symlink/packages
+atom.symlink/recovery
+atom.symlink/storage
+
+git/gitconfig.symlink
+
 *.sublime-project
 *.sublime-workspace
-/lib/
-git/gitconfig.symlink

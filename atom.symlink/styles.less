@@ -32,8 +32,55 @@
   }
 }
 
+// Twilight improvements
+.theme-twilight {
+  atom-pane-container atom-pane {
+    background-color: #181818;
+  }
+
+  .tab-bar {
+    &::after {
+      background-color: #181818;
+      border-bottom-color: #181818;
+    }
+
+    .tab.active,
+    .tab.active::before,
+    .tab.active::after {
+      background-image: -webkit-linear-gradient(top, #313131, #181818);
+    }
+  }
+
+  atom-text-editor::shadow {
+    .wrap-guide {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .highlights .highlight-selected .region {
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+
 // Sunburst improvements
 .theme-sunburst {
+  atom-pane-container atom-pane {
+    background-color: #000;
+  }
+
+  .tab-bar {
+    &::after {
+      background-color: #000;
+      border-bottom-color: #000;
+    }
+
+    .tab.active,
+    .tab.active::before,
+    .tab.active::after {
+      background-image: -webkit-linear-gradient(top, #202020, #000);
+    }
+  }
+
   atom-text-editor::shadow {
     .wrap-guide {
       background-color: rgba(255, 255, 255, 0.2);
@@ -53,6 +100,10 @@
 
     .selection .region {
       background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .highlights .highlight-selected .region {
+      border-color: rgba(255, 255, 255, 0.5);
     }
   }
 }
