@@ -1,9 +1,7 @@
 export ZSH=$HOME/.dotfiles
 
-export PATH=$ZSH/bin:$HOME/.gem/ruby/2.1.0/bin:$PATH
-
 typeset -U config_files
-config_files=($ZSH/*/*.zsh)
+config_files=($ZSH/**/*.zsh)
 
 
 ### ENVIRONMENT
@@ -23,6 +21,11 @@ export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[04;38;5;146m'
 
 export LESS=XFRaeiM # the XFR is important here: don't mess with the terminal!
+
+# Load the path files
+for file in ${(M)config_files:#*/path.zsh}; do
+    source $file
+done
 
 # Make a help command available, something like bash :-)
 autoload -U run-help
@@ -50,6 +53,7 @@ if (( $+commands[brew] )); then
     antigen bundle brew-cask
 fi
 
+antigen bundle composer
 antigen bundle git
 antigen bundle git-extras
 antigen bundle grunt
@@ -57,24 +61,21 @@ antigen bundle history
 antigen bundle npm
 antigen bundle pip
 antigen bundle sublime
+antigen bundle z
 
 antigen apply
 
-source $ZSH/zsh/aliases.zsh
-source $ZSH/zsh/completion.zsh
-source $ZSH/zsh/config.zsh
-source $ZSH/zsh/window.zsh
+# Load everything but the path and completion files
+for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}; do
+    source $file
+done
 
 # Initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit && compinit
-fpath=(/usr/local/share/zsh-completions $fpath)
 
+# Load every completion after autocomplete loads
+for file in ${(M)config_files:#*/completion.zsh}; do
+    source $file
+done
 
-### PROMPT
-
-ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[magenta]%}("
-ZSH_THEME_GIT_PROMPT_SUFFIX=")"
-
-autoload -U colors && colors
-
-PROMPT='%n@%m %{$fg_bold[blue]%}%~%b$(git_prompt_info) %{$fg_bold[blue]%}%#%{$reset_color%} '
+unset config_files

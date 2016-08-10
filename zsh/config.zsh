@@ -1,4 +1,5 @@
 fpath=($ZSH/functions $fpath)
+
 autoload -U $ZSH/functions/*(:t)
 
 setopt AUTO_CD # cd if no matching command
