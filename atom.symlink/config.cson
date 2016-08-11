@@ -1,13 +1,11 @@
 "*":
-  "color-picker":
-    abbreviateValues: true
-    automaticReplace: true
-    preferredFormat: "HEX"
+  "autocomplete-php": {}
   core:
     disabledPackages: [
       "metrics"
       "exception-reporting"
       "background-tips"
+      "wrap-guide"
     ]
     packagesWithKeymapsDisabled: []
     themes: [
@@ -26,11 +24,22 @@
     zoomFontWhenCtrlScrolling: false
   "file-icons": {}
   minimap: {}
+  "multi-wrap-guide":
+    columns: [
+      80
+      120
+    ]
+    icons: false
+    locked: true
+    silent: true
   "release-notes":
     viewedVersion: "f0bd3b1"
   "split-diff":
     ignoreWhitespace: true
     syncHorizontalScroll: true
+  "tree-view":
+    hideIgnoredNames: true
+    squashDirectoryNames: true
   welcome:
     showOnStartup: false
   whitespace: {}

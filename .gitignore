@@ -7,6 +7,8 @@ atom.symlink/compile-cache
 atom.symlink/packages
 atom.symlink/recovery
 atom.symlink/storage
+atom.symlink/nohup.out
+atom.symlink/projects.cson
 
 git/gitconfig.symlink
 

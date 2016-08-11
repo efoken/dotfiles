@@ -59,6 +59,10 @@
     .highlights .highlight-selected .region {
       border-color: rgba(255, 255, 255, 0.5);
     }
+
+    .vertical .multi-wrap-guide .multi-wrap-guide-line {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
   }
 }
 
@@ -105,11 +109,23 @@
     .highlights .highlight-selected .region {
       border-color: rgba(255, 255, 255, 0.5);
     }
+
+    .vertical .multi-wrap-guide .multi-wrap-guide-line {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
   }
 }
 
-atom-text-editor {
-  -webkit-font-smoothing: subpixel-antialiased;
+.platform-linux {
+  atom-text-editor {
+    font-size: 13px;
+  }
+}
+
+.platform-darwin {
+  atom-text-editor {
+    font-size: 12px;
+  }
 }
 
 atom-text-editor::shadow {
