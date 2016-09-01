@@ -32,40 +32,6 @@
   }
 }
 
-// Twilight improvements
-.theme-twilight {
-  atom-pane-container atom-pane {
-    background-color: #181818;
-  }
-
-  .tab-bar {
-    &::after {
-      background-color: #181818;
-      border-bottom-color: #181818;
-    }
-
-    .tab.active,
-    .tab.active::before,
-    .tab.active::after {
-      background-image: -webkit-linear-gradient(top, #313131, #181818);
-    }
-  }
-
-  atom-text-editor::shadow {
-    .wrap-guide {
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-
-    .highlights .highlight-selected .region {
-      border-color: rgba(255, 255, 255, 0.5);
-    }
-
-    .vertical .multi-wrap-guide .multi-wrap-guide-line {
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-  }
-}
-
 // Sunburst improvements
 .theme-sunburst {
   atom-pane-container atom-pane {
@@ -86,12 +52,13 @@
   }
 
   atom-text-editor::shadow {
-    .wrap-guide {
+    .wrap-guide,
+    .multi-wrap-guide .multi-wrap-guide-line {
       background-color: rgba(255, 255, 255, 0.2);
     }
 
     .invisible-character {
-      color: rgba(255, 255, 255, 0.2);
+      color: #000;
     }
 
     .indent-guide {
@@ -109,10 +76,10 @@
     .highlights .highlight-selected .region {
       border-color: rgba(255, 255, 255, 0.5);
     }
+  }
 
-    .vertical .multi-wrap-guide .multi-wrap-guide-line {
-      background-color: rgba(255, 255, 255, 0.2);
-    }
+  /deep/ .keyword.operator {
+    color: #e28964;
   }
 }
 

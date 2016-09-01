@@ -2,3 +2,4 @@
 --sort-files
 
 --ignore-file=match:.sublime-workspace
+--ignore-file=is:composer.phar

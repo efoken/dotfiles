@@ -6,6 +6,7 @@ atom.symlink/blob-store
 atom.symlink/compile-cache
 atom.symlink/packages
 atom.symlink/recovery
+atom.symlink/split-diff
 atom.symlink/storage
 atom.symlink/nohup.out
 atom.symlink/projects.cson
