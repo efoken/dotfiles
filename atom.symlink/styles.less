@@ -32,6 +32,10 @@
   }
 }
 
+.deprecation-cop-status {
+  // display: none;
+}
+
 // Sunburst improvements
 .theme-sunburst {
   atom-pane-container atom-pane {
@@ -51,7 +55,7 @@
     }
   }
 
-  atom-text-editor::shadow {
+  atom-text-editor.editor {
     .wrap-guide,
     .multi-wrap-guide .multi-wrap-guide-line {
       background-color: rgba(255, 255, 255, 0.2);
@@ -78,7 +82,7 @@
     }
   }
 
-  /deep/ .keyword.operator {
+  .syntax--keyword.syntax--operator {
     color: #e28964;
   }
 }
@@ -95,7 +99,7 @@
   }
 }
 
-atom-text-editor::shadow {
+atom-text-editor.editor {
   .invisible-character.eol {
     opacity: 0;
   }
@@ -105,7 +109,7 @@ atom-text-editor::shadow {
   }
 }
 
-atom-text-editor::shadow atom-text-editor-minimap::shadow {
+atom-text-editor.editor atom-text-editor-minimap {
   canvas {
     opacity: 0.4;
   }
@@ -121,6 +125,6 @@ atom-text-editor::shadow atom-text-editor-minimap::shadow {
   }
 }
 
-atom-text-editor::shadow atom-text-editor-minimap:hover::shadow .minimap-visible-area::after {
+atom-text-editor.editor atom-text-editor-minimap:hover .minimap-visible-area::after {
   background-color: rgba(255, 255, 255, 0.1);
 }

@@ -8,6 +8,7 @@
       "wrap-guide"
     ]
     packagesWithKeymapsDisabled: []
+    telemetryConsent: "no"
     themes: [
       "atom-dark-ui"
       "sunburst"
