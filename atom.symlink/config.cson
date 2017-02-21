@@ -1,11 +1,20 @@
 "*":
-  "autocomplete-php": {}
   core:
     disabledPackages: [
       "metrics"
       "exception-reporting"
       "background-tips"
       "wrap-guide"
+    ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "desktop.ini"
+      "__pycache__"
     ]
     packagesWithKeymapsDisabled: []
     telemetryConsent: "no"
@@ -23,11 +32,10 @@
     softWrap: true
     softWrapHangingIndent: 4
     zoomFontWhenCtrlScrolling: false
-  "file-icons": {}
-  minimap: {}
   "multi-wrap-guide":
     columns: [
       80
+      100
       120
     ]
     icons: false
@@ -43,4 +51,3 @@
     squashDirectoryNames: true
   welcome:
     showOnStartup: false
-  whitespace: {}
