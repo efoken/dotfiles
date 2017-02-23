@@ -1,5 +1,9 @@
 "*":
   core:
+    customFileTypes:
+      "source.json": [
+        "stylelintrc"
+      ]
     disabledPackages: [
       "metrics"
       "exception-reporting"
