@@ -24,7 +24,7 @@
     telemetryConsent: "no"
     themes: [
       "atom-dark-ui"
-      "sunburst"
+      "seti-syntax"
     ]
   editor:
     fontFamily: "Hack"
@@ -47,6 +47,9 @@
     silent: true
   "release-notes":
     viewedVersion: "f0bd3b1"
+  "seti-syntax":
+    dynamicColor: false
+    themeColor: "Steel"
   "split-diff":
     ignoreWhitespace: true
     syncHorizontalScroll: true
