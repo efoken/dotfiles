@@ -9,10 +9,9 @@ atom.symlink/packages
 atom.symlink/recovery
 atom.symlink/split-diff
 atom.symlink/storage
+atom.symlink/kite-config.json
 atom.symlink/nohup.out
+atom.symlink/package-deps-state.json
 atom.symlink/projects.cson
 
 git/gitconfig.symlink
-
-*.sublime-project
-*.sublime-workspace

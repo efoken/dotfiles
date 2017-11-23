@@ -1,5 +1,9 @@
 # Always sort found files lexically
 --sort-files
 
---ignore-file=match:.sublime-workspace
 --ignore-file=is:composer.phar
+--ignore-dir=.venv/
+--ignore-dir=node_modules/
+
+--type-set=smarty=.tpl
+--type-set=markdown=.md,.markdown

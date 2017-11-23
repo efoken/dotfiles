@@ -4,8 +4,9 @@ tap 'caskroom/cask'
 tap 'homebrew/bundle'
 
 brew 'ack'
-brew 'antigen'
 brew 'ag'
+brew 'antigen'
+brew 'diff-so-fancy'
 brew 'grc'
 brew 'unrar'
 

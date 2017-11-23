@@ -16,19 +16,16 @@
       ".svn"
       ".DS_Store"
       "._*"
-      "Thumbs.db"
-      "desktop.ini"
       "__pycache__"
     ]
     packagesWithKeymapsDisabled: []
     telemetryConsent: "no"
     themes: [
       "atom-dark-ui"
-      "seti-syntax"
+      "starburst"
     ]
   editor:
     fontFamily: "Hack"
-    fontSize: 12
     invisibles: {}
     lineHeight: 1.3
     showIndentGuide: true
@@ -36,6 +33,12 @@
     softWrap: true
     softWrapHangingIndent: 4
     zoomFontWhenCtrlScrolling: false
+  "linter-pylama":
+    configFileLoad: "Use pylama config"
+    configFileName: "setup.cfg"
+    interpreter: "/$PROJECT/.venv/bin/python, python3, python"
+  "linter-ui-default":
+    panelHeight: 296
   "multi-wrap-guide":
     columns: [
       80
@@ -47,9 +50,6 @@
     silent: true
   "release-notes":
     viewedVersion: "f0bd3b1"
-  "seti-syntax":
-    dynamicColor: false
-    themeColor: "Steel"
   "split-diff":
     ignoreWhitespace: true
     syncHorizontalScroll: true
@@ -58,3 +58,7 @@
     squashDirectoryNames: true
   welcome:
     showOnStartup: false
+".blade.html.php.text":
+  editor:
+    commentEnd: " --}}"
+    commentStart: "{{-- "

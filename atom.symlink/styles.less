@@ -32,13 +32,40 @@
   }
 }
 
-.deprecation-cop-status {
-  // display: none;
+atom-workspace .item-views {
+  background-color: #000;
 }
 
-// Sunburst improvements
-.theme-sunburst {
-  atom-pane-container atom-pane {
+.theme-atom-dark-syntax {
+  atom-text-editor,
+  atom-text-editor .gutter,
+  atom-text-editor .gutter .line-number {
+    background-color: #000;
+  }
+
+  atom-text-editor .gutter .line-number.cursor-line-no-selection,
+  atom-text-editor .line.cursor-line {
+    background-color: rgba(255, 255, 255, 0.075) !important;
+  }
+
+  .tab-bar {
+    &::after {
+      background-color: #000;
+      border-bottom-color: #000;
+    }
+
+    .tab.active,
+    .tab.active::before,
+    .tab.active::after {
+      background-image: -webkit-linear-gradient(top, #202020, #000);
+    }
+  }
+}
+
+.theme-sunburst,
+.theme-starburst {
+  atom-text-editor,
+  atom-text-editor .gutter {
     background-color: #000;
   }
 
@@ -85,6 +112,10 @@
   .syntax--keyword.syntax--operator {
     color: #e28964;
   }
+
+  .syntax--text .syntax--source {
+    background-color: transparent;
+  }
 }
 
 .platform-linux {
@@ -99,12 +130,12 @@
   }
 }
 
-atom-text-editor.editor {
+atom-text-editor {
   .invisible-character.eol {
     opacity: 0;
   }
 
-  .line-number {
+  .gutter .line-number {
     padding-left: 1em;
   }
 }
