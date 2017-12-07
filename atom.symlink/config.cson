@@ -3,11 +3,13 @@
     customFileTypes:
       "source.json": [
         "stylelintrc"
+        "eslintrc"
       ]
     disabledPackages: [
       "metrics"
       "exception-reporting"
       "background-tips"
+      "welcome"
       "wrap-guide"
     ]
     ignoredNames: [
@@ -37,8 +39,7 @@
     configFileLoad: "Use pylama config"
     configFileName: "setup.cfg"
     interpreter: "/$PROJECT/.venv/bin/python, python3, python"
-  "linter-ui-default":
-    panelHeight: 296
+  "linter-ui-default": {}
   "multi-wrap-guide":
     columns: [
       80

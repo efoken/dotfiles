@@ -2,6 +2,8 @@
 --sort-files
 
 --ignore-file=is:composer.phar
+--ignore-file=is:npm-debug.log
+--ignore-file=is:yarn-error.log
 --ignore-dir=.venv/
 --ignore-dir=node_modules/
 
