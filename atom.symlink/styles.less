@@ -1,39 +1,37 @@
-.tree-view {
-  background: #e6e6e6;
-}
+.theme-atom-dark-ui {
+  .tree-view {
+    background: #e6e6e6;
 
-.focusable-panel:focus {
-  background: #e6e6e6;
-
-  .selected:before {
-    background: #444;
-  }
-}
-
-.list-tree {
-  li:not(.list-nested-item),
-  li.list-nested-item > .list-item {
-    color: #333;
+    .selected::before {
+      background: #333;
+    }
   }
 
-  li:not(.list-nested-item).status-ignored,
-  li.list-nested-item.status-ignored > .list-item {
-    color: #a0a0a0;
+  .list-tree {
+    li:not(.list-nested-item):not(.selected),
+    li.list-nested-item:not(.selected) > .list-item {
+      color: #333;
+    }
+
+    li:not(.list-nested-item).status-ignored,
+    li.list-nested-item.status-ignored > .list-item {
+      color: #a0a0a0;
+    }
+
+    li:not(.list-nested-item).status-added,
+    li.list-nested-item.status-added > .list-item {
+      color: #00c254;
+    }
+
+    li:not(.list-nested-item).status-modified,
+    li.list-nested-item.status-modified > .list-item {
+      color: #f07a00;
+    }
   }
 
-  li:not(.list-nested-item).status-added,
-  li.list-nested-item.status-added > .list-item {
-    color: #00c254;
+  .item-views {
+    background-color: #000;
   }
-
-  li:not(.list-nested-item).status-modified,
-  li.list-nested-item.status-modified > .list-item {
-    color: #f07a00;
-  }
-}
-
-atom-workspace .item-views {
-  background-color: #000;
 }
 
 .theme-atom-dark-syntax {
@@ -115,18 +113,6 @@ atom-workspace .item-views {
 
   .syntax--text .syntax--source {
     background-color: transparent;
-  }
-}
-
-.platform-linux {
-  atom-text-editor {
-    font-size: 13px;
-  }
-}
-
-.platform-darwin {
-  atom-text-editor {
-    font-size: 12px;
   }
 }
 
