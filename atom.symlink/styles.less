@@ -7,6 +7,14 @@
     }
   }
 
+  .outline-view {
+    background: #e6e6e6;
+  }
+
+  .outline-view-core {
+    font-size: 11px;
+  }
+
   .list-tree {
     li:not(.list-nested-item):not(.selected),
     li.list-nested-item:not(.selected) > .list-item {
@@ -35,6 +43,20 @@
 }
 
 .theme-atom-dark-syntax {
+  .atom-dock-mask {
+    background-color: #000;
+  }
+
+  .atom-dock-mask::before {
+    background-color: #535353;
+    content: "";
+    display: block;
+    height: 31px;
+    position: absolute;
+    right: 0;
+    width: 4px;
+  }
+
   atom-text-editor,
   atom-text-editor .gutter,
   atom-text-editor .gutter .line-number {
@@ -46,18 +68,7 @@
     background-color: rgba(255, 255, 255, 0.075) !important;
   }
 
-  .tab-bar {
-    &::after {
-      background-color: #000;
-      border-bottom-color: #000;
-    }
-
-    .tab.active,
-    .tab.active::before,
-    .tab.active::after {
-      background-image: -webkit-linear-gradient(top, #202020, #000);
-    }
-  }
+  @import "styles/tabs";
 }
 
 .theme-sunburst,
@@ -94,8 +105,8 @@
       box-shadow: inset 1px 0 rgba(255, 255, 255, 0.1);
     }
 
-    .line.cursor-line {
-      background-color: rgba(255, 255, 255, 0.1);
+    .invisible-character {
+      color: #000;
     }
 
     .selection .region {

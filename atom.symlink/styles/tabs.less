@@ -1,0 +1,38 @@
+.tab-bar {
+  background-color: #535353;
+  box-shadow: none;
+
+  &::after {
+    background-color: #000;
+    border-color: #000;
+  }
+
+  .tab {
+    &,
+    &::before,
+    &::after {
+      background-color: #2e2e2e;
+      background-image: none;
+    }
+
+    &::before {
+      box-shadow: -4px 0 4px rgba(0, 0, 0, 0.1);
+    }
+
+    &::after {
+      box-shadow: 4px 0 4px rgba(0, 0, 0, 0.1);
+    }
+
+    &.active,
+    &.active::before,
+    &.active::after {
+      background-color: #000;
+      background-image: none;
+      box-shadow: 4px -4px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    &.active::before {
+      box-shadow: -4px -4px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+}

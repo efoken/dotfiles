@@ -12,6 +12,7 @@ language-blade
 language-docker
 language-twig
 linter-eslint
+linter-phpcs
 linter-stylelint
 minimap
 minimap-linter
