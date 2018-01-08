@@ -1,0 +1,52 @@
+atom-dock.left .tab-bar {
+  display: none;
+}
+
+.theme-atom-dark-ui {
+  .tab-bar {
+    background-color: #6c6d68;
+    box-shadow: none;
+
+    .tab {
+      background-color: #333;
+      background-image: none;
+      box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
+
+      &::before {
+        background: inherit;
+        box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), -4px 0 4px rgba(0, 0, 0, 0.1);
+      }
+
+      &::after {
+        background: inherit;
+        box-shadow: inset -1px 1px 0 rgba(0, 0, 0, 0.1), 4px 0 4px rgba(0, 0, 0, 0.1);
+      }
+
+      &.active,
+      &.active::after {
+        box-shadow: 4px -4px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      &.active::before {
+        box-shadow: -4px -4px 4px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}
+
+.theme-atom-dark-syntax {
+  .tab-bar {
+    &::after {
+      background-color: #000;
+      border-color: #000;
+    }
+
+    .tab {
+      &.active,
+      &.active::before,
+      &.active::after {
+        background-color: #000;
+      }
+    }
+  }
+}

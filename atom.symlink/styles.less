@@ -1,14 +1,32 @@
+@import "styles/tab-bar";
+@import "styles/text-editor";
+
+.inset-panel {
+  border-radius: 0;
+}
+
 .theme-atom-dark-ui {
   .tree-view {
-    background: #e6e6e6;
+    background-color: #ebedef;
+
+    li:not(.list-nested-item):hover::after,
+    li.list-nested-item > .list-item:hover::after {
+      background-color: #dbdde0;
+      content: "";
+      height: 25px;
+      left: -100%;
+      position: absolute;
+      right: 0;
+      z-index: -1;
+    }
 
     .selected::before {
-      background: #333;
+      background-color: #c7cbd1;
     }
   }
 
   .outline-view {
-    background: #e6e6e6;
+    background: #ebedef;
   }
 
   .outline-view-core {
@@ -16,9 +34,10 @@
   }
 
   .list-tree {
-    li:not(.list-nested-item):not(.selected),
-    li.list-nested-item:not(.selected) > .list-item {
+    li:not(.list-nested-item),
+    li.list-nested-item > .list-item {
       color: #333;
+      text-shadow: none;
     }
 
     li:not(.list-nested-item).status-ignored,
@@ -40,119 +59,4 @@
   .item-views {
     background-color: #000;
   }
-}
-
-.theme-atom-dark-syntax {
-  .atom-dock-mask {
-    background-color: #000;
-  }
-
-  .atom-dock-mask::before {
-    background-color: #535353;
-    content: "";
-    display: block;
-    height: 31px;
-    position: absolute;
-    right: 0;
-    width: 4px;
-  }
-
-  atom-text-editor,
-  atom-text-editor .gutter,
-  atom-text-editor .gutter .line-number {
-    background-color: #000;
-  }
-
-  atom-text-editor .gutter .line-number.cursor-line-no-selection,
-  atom-text-editor .line.cursor-line {
-    background-color: rgba(255, 255, 255, 0.075) !important;
-  }
-
-  @import "styles/tabs";
-}
-
-.theme-sunburst,
-.theme-starburst {
-  atom-text-editor,
-  atom-text-editor .gutter {
-    background-color: #000;
-  }
-
-  .tab-bar {
-    &::after {
-      background-color: #000;
-      border-bottom-color: #000;
-    }
-
-    .tab.active,
-    .tab.active::before,
-    .tab.active::after {
-      background-image: -webkit-linear-gradient(top, #202020, #000);
-    }
-  }
-
-  atom-text-editor.editor {
-    .wrap-guide,
-    .multi-wrap-guide .multi-wrap-guide-line {
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-
-    .invisible-character {
-      color: #000;
-    }
-
-    .indent-guide {
-      box-shadow: inset 1px 0 rgba(255, 255, 255, 0.1);
-    }
-
-    .invisible-character {
-      color: #000;
-    }
-
-    .selection .region {
-      background-color: rgba(255, 255, 255, 0.3);
-    }
-
-    .highlights .highlight-selected .region {
-      border-color: rgba(255, 255, 255, 0.5);
-    }
-  }
-
-  .syntax--keyword.syntax--operator {
-    color: #e28964;
-  }
-
-  .syntax--text .syntax--source {
-    background-color: transparent;
-  }
-}
-
-atom-text-editor {
-  .invisible-character.eol {
-    opacity: 0;
-  }
-
-  .gutter .line-number {
-    padding-left: 1em;
-  }
-}
-
-atom-text-editor.editor atom-text-editor-minimap {
-  canvas {
-    opacity: 0.4;
-  }
-
-  .minimap-visible-area::after {
-    background-color: transparent;
-    transition: background-color 0.2s ease;
-  }
-
-  // Remove stupid quick-settings in minimap
-  .minimap-controls {
-    display: none;
-  }
-}
-
-atom-text-editor.editor atom-text-editor-minimap:hover .minimap-visible-area::after {
-  background-color: rgba(255, 255, 255, 0.1);
 }
