@@ -2,6 +2,7 @@ atom-alignment
 atom-ide-ui
 atom-spotify2
 atom-ternjs
+autoclose-html
 editorconfig
 file-icons
 git-plus
@@ -10,16 +11,14 @@ ide-php
 language-babel
 language-blade
 language-docker
+language-postcss
 language-twig
 linter-eslint
 linter-phpcs
 linter-stylelint
 minimap
 minimap-linter
-multi-wrap-guide
 project-manager
 project-view
 sort-lines
-starburst
-tree-view-git-branch
 tree-view-git-status
