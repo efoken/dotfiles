@@ -6,8 +6,10 @@ autoclose-html
 editorconfig
 file-icons
 git-plus
+highlight-selected
 ide-flowtype
 ide-php
+ide-typescript
 language-babel
 language-blade
 language-docker

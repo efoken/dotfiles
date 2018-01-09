@@ -1,61 +1,12 @@
 @import "styles/tab-bar";
 @import "styles/text-editor";
+@import "styles/tree-view";
 
 .inset-panel {
   border-radius: 0;
 }
 
 .theme-atom-dark-ui {
-  .tree-view {
-    background-color: #ebedef;
-
-    li:not(.list-nested-item):hover::after,
-    li.list-nested-item > .list-item:hover::after {
-      background-color: #dbdde0;
-      content: "";
-      height: 25px;
-      left: -100%;
-      position: absolute;
-      right: 0;
-      z-index: -1;
-    }
-
-    .selected::before {
-      background-color: #c7cbd1;
-    }
-  }
-
-  .outline-view {
-    background: #ebedef;
-  }
-
-  .outline-view-core {
-    font-size: 11px;
-  }
-
-  .list-tree {
-    li:not(.list-nested-item),
-    li.list-nested-item > .list-item {
-      color: #333;
-      text-shadow: none;
-    }
-
-    li:not(.list-nested-item).status-ignored,
-    li.list-nested-item.status-ignored > .list-item {
-      color: #a0a0a0;
-    }
-
-    li:not(.list-nested-item).status-added,
-    li.list-nested-item.status-added > .list-item {
-      color: #00c254;
-    }
-
-    li:not(.list-nested-item).status-modified,
-    li.list-nested-item.status-modified > .list-item {
-      color: #f07a00;
-    }
-  }
-
   .item-views {
     background-color: #000;
   }
