@@ -11,6 +11,7 @@ ide-php
 language-babel
 language-blade
 language-docker
+language-gradle
 language-postcss
 language-twig
 linter-eslint

@@ -1,5 +1,7 @@
+# shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
 
+# all of our zsh files
 typeset -U config_files
 config_files=($ZSH/**/*.zsh)
 
@@ -22,7 +24,7 @@ export LESS_TERMCAP_us=$'\e[04;38;5;146m'
 
 export LESS=XFRaeiM # the XFR is important here: don't mess with the terminal!
 
-# Load the path files
+# load the path files
 for file in ${(M)config_files:#*/path.zsh}; do
     source $file
 done
@@ -51,24 +53,25 @@ antigen use oh-my-zsh
 antigen bundle composer
 antigen bundle git
 antigen bundle git-extras
-antigen bundle grunt
+antigen bundle gradle
 antigen bundle history
 antigen bundle npm
 antigen bundle pip
-antigen bundle sublime
+antigen bundle yarn
 antigen bundle z
 
 antigen apply
 
-# Load everything but the path and completion files
+# load everything but the path and completion files
 for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}; do
     source $file
 done
 
-# Initialize autocomplete here, otherwise functions won't be loaded
-autoload -U compinit && compinit
+# initialize autocomplete here, otherwise functions won't be loaded
+autoload -U compinit
+compinit
 
-# Load every completion after autocomplete loads
+# load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}; do
     source $file
 done
