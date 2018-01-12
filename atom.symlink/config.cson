@@ -66,6 +66,8 @@
     autoReveal: true
     hideIgnoredNames: true
     squashDirectoryNames: true
+  wakatime:
+    apikey: "Saved in your ~/.wakatime.cfg file"
   welcome:
     showOnStartup: false
 ".blade.html.php.text":

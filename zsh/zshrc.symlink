@@ -51,12 +51,14 @@ fi
 antigen use oh-my-zsh
 
 antigen bundle composer
+antigen bundle docker
 antigen bundle git
 antigen bundle git-extras
 antigen bundle gradle
 antigen bundle history
 antigen bundle npm
 antigen bundle pip
+antigen bundle wbingli/zsh-wakatime
 antigen bundle yarn
 antigen bundle z
 

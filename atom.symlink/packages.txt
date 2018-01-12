@@ -25,3 +25,4 @@ project-manager
 project-view
 sort-lines
 tree-view-git-status
+wakatime
