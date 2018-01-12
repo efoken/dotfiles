@@ -1,6 +1,7 @@
 #!/bin/sh
 #
-# Usage: extract <dir>
+# Usage: pycclean <dir>
+# Description: Removes all .pyc, .pyo and __pycache__ files
 pycclean () {
     find $1 | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf
 }
