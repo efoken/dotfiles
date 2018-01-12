@@ -1,3 +1,3 @@
-if test ! $(which yarn); then
-    npm install -g yarn
+if test ! $(which spoof); then
+    npm install -g spoof
 fi
