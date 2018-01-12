@@ -1,9 +1,7 @@
-[user]
-	name = AUTHOR_NAME
-	email = AUTHOR_EMAIL
-[credential]
-	helper = GIT_CREDENTIAL_HELPER
+[include]
+	path = ~/.gitconfig.local
 [alias]
+	change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f "
 	count = !git shortlog -sn
 	rank-contributors = !$ZSH/bin/git-rank-contributors
 	wtf = !$ZSH/bin/git-wtf
@@ -36,3 +34,16 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = ~/.stCommitMsg
