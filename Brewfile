@@ -1,42 +1,55 @@
-cask_args appdir: '/Applications'
+cask_args appdir: "/Applications"
 
-tap 'caskroom/cask'
-tap 'homebrew/bundle'
+tap "caskroom/cask"
+tap "caskroom/fonts"
+tap "homebrew/bundle"
 
-brew 'ack'
-brew 'antigen'
-brew 'diff-so-fancy'
-brew 'git'
-brew 'git-open'
-brew 'gradle'
-brew 'grc'
-brew 'grunt'
-brew 'grunt-completions'
-brew 'node'
-brew 'the_silver_searcher'
-brew 'unrar'
-brew 'wakatime-cli'
-brew 'wget'
-brew 'yarn'
-brew 'zsh'
-brew 'zsh-completions'
+brew "ack"
+brew "antigen"
+brew "diff-so-fancy"
+brew "git"
+brew "git-open"
+brew "gradle"
+brew "grc"
+brew "grunt-cli"
+brew "grunt-completions"
+brew "mariadb"
+brew "mas"
+brew "mysqlworkbench"
+brew "node"
+brew "the_silver_searcher"
+brew "unrar"
+brew "wakatime-cli"
+brew "wget"
+brew "yarn"
+brew "zsh"
+brew "zsh-completions"
 
-cask '1password'
-cask 'android-platform-tools'
-cask 'android-sdk'
-cask 'atom'
-cask 'cyberduck'
-cask 'docker'
-cask 'dropbox'
-cask 'google-chrome'
-cask 'java'
-cask 'poedit'
-cask 'postgres'
-cask 'sourcetree'
-cask 'spectacle'
-cask 'spotify'
-cask 'sublime-text'
-cask 'the-unarchiver'
-cask 'tunnelbear'
-cask 'tunnelblick'
-cask 'vlc'
+# PHP
+brew "homebrew/php/composer"
+brew "homebrew/php/php71", args: ["with-imap"]
+
+# Applications
+cask "1password"
+cask "android-platform-tools"
+cask "android-sdk"
+cask "atom"
+cask "cyberduck"
+cask "docker"
+cask "dropbox"
+cask "google-chrome"
+cask "java" unless system "/usr/libexec/java_home --failfast"
+cask "poedit"
+cask "postgres"
+cask "postico"
+cask "sourcetree"
+cask "spectacle"
+cask "spotify"
+cask "sublime-text"
+cask "the-unarchiver"
+cask "tunnelbear"
+cask "tunnelblick"
+cask "vlc"
+
+# Fonts
+cask "font-hack"
