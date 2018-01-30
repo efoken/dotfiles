@@ -1,3 +1,4 @@
+api-workbench
 atom-alignment
 atom-ide-ui
 atom-spotify2

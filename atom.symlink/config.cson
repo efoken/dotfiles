@@ -3,23 +3,30 @@
     ignored: [
       "linter-eslint"
       "linter-pylama"
+      "api-workbench"
     ]
   "atom-spotify2": {}
   core:
     customFileTypes:
-      "source.ini": [
-        ".flowconfig"
-        ".hgrc"
-      ]
       "source.json": [
         "stylelintrc"
         "eslintrc"
+      ]
+      "text.html.twig": [
+        "htm"
       ]
     disabledPackages: [
       "metrics"
       "exception-reporting"
       "background-tips"
       "welcome"
+      "ide-typescript"
+      "ide-flowtype"
+      "linter"
+      "busy-signal"
+      "intentions"
+      "linter-ui-default"
+      "whitespace"
     ]
     ignoredNames: [
       ".git"
@@ -45,6 +52,9 @@
     softWrap: true
     softWrapHangingIndent: 4
     zoomFontWhenCtrlScrolling: false
+  "gitlab-integration":
+    token: "SW5HAQmz41cyifKbgjLZ"
+    unsecureSsl: true
   kite:
     showKiteTourOnStartup: false
   "linter-eslint":
@@ -63,7 +73,6 @@
     ignoreWhitespace: true
     syncHorizontalScroll: true
   "tree-view":
-    autoReveal: true
     hideIgnoredNames: true
     squashDirectoryNames: true
   wakatime:
