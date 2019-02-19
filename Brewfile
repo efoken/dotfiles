@@ -28,6 +28,7 @@ brew "zsh-completions"
 # PHP
 brew "homebrew/php/composer"
 brew "homebrew/php/php71", args: ["with-imap"]
+brew "homebrew/php/php71-pdo-pgsql"
 
 # Applications
 cask "1password"
