@@ -1,9 +1,12 @@
 "*":
+  "atom-ide-ui":
+    use: {}
   "atom-package-deps":
     ignored: [
       "linter-eslint"
       "linter-pylama"
       "api-workbench"
+      "linter-stylelint"
     ]
   "atom-spotify2": {}
   core:
@@ -20,13 +23,10 @@
       "exception-reporting"
       "background-tips"
       "welcome"
-      "ide-typescript"
-      "ide-flowtype"
-      "linter"
-      "busy-signal"
-      "intentions"
-      "linter-ui-default"
       "whitespace"
+      "language-javascript"
+      "language-typescript"
+      "ide-typescript"
     ]
     ignoredNames: [
       ".git"
@@ -44,7 +44,6 @@
     ]
   editor:
     fontFamily: "Hack"
-    fontSize: 13
     invisibles: {}
     lineHeight: 1.3
     showIndentGuide: true
@@ -55,14 +54,18 @@
   "gitlab-integration":
     token: "SW5HAQmz41cyifKbgjLZ"
     unsecureSsl: true
+  "ide-typescript": {}
   kite:
     showKiteTourOnStartup: false
+  "language-babel": {}
   "linter-eslint":
-    globalNodePath: "/usr/local"
+    global:
+      globalNodePath: "/usr/local"
   "linter-pylama":
     configFileLoad: "Use pylama config"
     configFileName: "setup.cfg"
     interpreter: "/$PROJECT/.venv/bin/python, python3, python"
+  "markdown-preview": {}
   minimap:
     plugins:
       linter: true
@@ -72,6 +75,8 @@
   "split-diff":
     ignoreWhitespace: true
     syncHorizontalScroll: true
+  svgo:
+    disable: "removeViewBox"
   "tree-view":
     hideIgnoredNames: true
     squashDirectoryNames: true
