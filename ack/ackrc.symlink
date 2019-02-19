@@ -6,6 +6,8 @@
 --ignore-file=is:yarn-error.log
 --ignore-dir=.venv/
 --ignore-dir=node_modules/
+--ignore-dir=vendor/
 
 --type-set=smarty=.tpl
 --type-set=markdown=.md,.markdown
+--type-set=less=.less
