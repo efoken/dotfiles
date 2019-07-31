@@ -1,0 +1,11 @@
+#!/bin/sh
+
+export ZSH=$HOME/.dotfiles
+
+# Upgrade homebrew
+echo "› brew update"
+brew update
+
+# Install software
+echo "› $ZSH/script/install"
+$ZSH/script/install

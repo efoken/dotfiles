@@ -27,13 +27,7 @@ class String
   def htmlize; gsub("&", "&amp;").gsub("<", "&lt;").gsub(">", "&gt;") end
   # Fix for invalid encodings http://stackoverflow.com/a/24037885
   def clean
-    if RUBY_VERSION >= "2.1"
-      scrub
-    elsif RUBY_VERSION >= "1.9"
-      encode("UTF-16be", :invalid => :replace).encode("UTF-8")
-    else
-      self
-    end
+    scrub
   end
 end
 
