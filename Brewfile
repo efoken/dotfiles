@@ -26,8 +26,8 @@ brew "zsh"
 brew "zsh-completions"
 
 # PHP
-brew "homebrew/php/composer"
-brew "homebrew/php/php71", args: ["with-imap"]
+# brew "homebrew/php/composer"
+# brew "homebrew/php/php71", args: ["with-imap"]
 
 # Applications
 cask "1password"
@@ -47,9 +47,11 @@ cask "spectacle"
 cask "spotify"
 cask "sublime-text"
 cask "the-unarchiver"
-cask "tunnelbear"
 cask "tunnelblick"
+cask "visual-studio-code"
 cask "vlc"
 
 # Fonts
+cask "font-amatic-sc"
 cask "font-hack"
+cask "font-lato"
