@@ -51,4 +51,4 @@ function chpwd() {
     virtualenv_auto_activate
 }
 
-export PROMPT='%n@%m %{$fg_bold[blue]%}%~%b$(git_prompt_info) %{$fg_bold[blue]%}%#%{$reset_color%} '
+export PROMPT='%n@%m [%T] %{$fg_bold[blue]%}%~%b$(git_prompt_info) %{$fg_bold[blue]%}%#%{$reset_color%} '
