@@ -1,1 +1,2 @@
-export PATH="/usr/local/opt/node@10/bin:$PATH"
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
