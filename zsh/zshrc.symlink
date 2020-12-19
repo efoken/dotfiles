@@ -52,7 +52,6 @@ antigen use oh-my-zsh
 
 antigen bundle composer
 antigen bundle docker
-antigen bundle eventi/noreallyjustfuckingstopalready
 antigen bundle git
 antigen bundle git-extras
 antigen bundle gradle
