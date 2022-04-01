@@ -4,7 +4,6 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/bundle"
 
-brew "ack"
 brew "antigen"
 brew "composer"
 brew "diff-so-fancy"
