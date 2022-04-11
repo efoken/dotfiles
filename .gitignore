@@ -1,16 +1,2 @@
 /cache
-/lib
-
-atom.symlink/.apm
-atom.symlink/.node-gyp
-atom.symlink/.storage
-atom.symlink/blob-store
-atom.symlink/compile-cache
-atom.symlink/packages
-atom.symlink/recovery
-atom.symlink/split-diff
-atom.symlink/storage
-atom.symlink/kite-config.json
-atom.symlink/projects.cson
-
-git/gitconfig.local.symlink
+/git/gitconfig.local.symlink
