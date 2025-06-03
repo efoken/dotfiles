@@ -21,7 +21,7 @@ alias vm='mv'
 # GRC colorizes nifty Unix tools all over the place
 if (( $+commands[grc] )); then
     if (( $+commands[brew] )); then
-        source `brew --prefix`/etc/grc.bashrc
+        source `brew --prefix`/etc/grc.zsh
     else
         alias grc='grc -es --colour=auto'
         alias as='grc as'

@@ -1,4 +1,8 @@
 syntax on
+set ruler
+
+set colorcolumn=72,80,100,120
+" hi ColorColumn ctermbg=lightgrey guibg=lightgrey
 
 " Wrap gitcommit file types at the appropriate length
 filetype indent plugin on

@@ -10,7 +10,7 @@ config_files=($ZSH/**/*.zsh)
 
 export EDITOR='vim'
 export VISUAL='vim'
-export BROWSER='google-chrome'
+# export BROWSER='google-chrome'
 export PAGER='less'
 
 # Colors for less without compiled termcap files (curses feature)
