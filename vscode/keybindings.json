@@ -1,0 +1,41 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "f5",
+    "command": "editor.action.sortLinesAscending",
+  },
+  {
+    "key": "shift+f5",
+    "command": "editor.action.sortLinesDescending",
+  },
+  {
+    "key": "cmd+j",
+    "command": "editor.action.joinLines",
+    "when": "editorTextFocus && !editorReadonly",
+  },
+  {
+    "key": "ctrl+j",
+    "command": "-editor.action.joinLines",
+    "when": "editorTextFocus && !editorReadonly",
+  },
+  {
+    "key": "alt+cmd+j",
+    "command": "notebook.cell.joinBelow",
+    "when": "notebookEditorFocused",
+  },
+  {
+    "key": "ctrl+alt+j",
+    "command": "-notebook.cell.joinBelow",
+    "when": "notebookEditorFocused",
+  },
+  {
+    "key": "shift+alt+cmd+j",
+    "command": "notebook.cell.joinAbove",
+    "when": "notebookEditorFocused",
+  },
+  {
+    "key": "ctrl+shift+alt+j",
+    "command": "-notebook.cell.joinAbove",
+    "when": "notebookEditorFocused",
+  },
+]
